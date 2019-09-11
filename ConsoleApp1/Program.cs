@@ -41,11 +41,13 @@ namespace ConsoleApp1
 
             string Nonce = "1";
 
+            //string Email = "liga-stavok-web@sandbox.today";
             string Email = "liga-stavok-web@oddsgames.com";
 
             //string message = ClientId + Nonce + Email;
             string message = $"{ClientId}{Email}{Nonce}";
 
+            //string key = "E93E8A55-EFF1-40DE-BC00-54614E8BE2F8";
             string key = "7CFA6C73-04F1-411E-9EEF-54A094FBF7C1";
 
             string signature = GenerateSignature(key, message);
@@ -110,20 +112,20 @@ namespace ConsoleApp1
 
             url = "https://api.oddsgames.com/api/data/user/register";
 
-            string userNameStart = "userNameTestFGoRK";
+            string userNameStart = "newUserNameGTeGot";
 
-            for (int i = 0; i < 20000; i++)
+            for (int i = 942; i < 20000; i++)
             {
                 string userName = userNameStart + i;
                 
                 string data3 =
                     "{" +
-                    "\"password\": \"string222\"," +
-                    "\"bonusAcceptance\": 0," +
+                    "\"password\": \"password123\"," +
+                    "\"bonusAcceptance\": 1," +
                     "\"externalIdentifier\": \"strin23ggfhUsser\"," +
                     "\"logonName\": \"" + userName + "\"," +
                     "\"branchId\": 1," +
-                    "\"currencyId\": 1," +
+                    "\"currencyId\": 126," +
                     "\"promotionCode\": \"string\"," +
                     "\"profile\": {" +
                     "\"id\": 0," +
@@ -131,7 +133,7 @@ namespace ConsoleApp1
                     "\"gender\": 2," +
                     "\"firstName\": \"string222\"," +
                     "\"lastName\": \"string888\"," +
-                    "\"birthday\": \"2000-09-11\"," +
+                    "\"birthday\": \"1980-09-11\"," +
                     "\"birthPlace\": \"string\"," +
                     "\"birthName\": \"string\"," +
                     "\"languageId\": 1," +
@@ -199,20 +201,27 @@ namespace ConsoleApp1
                     requestBody.Write(dataBytes3, 0, dataBytes3.Length);
                 }
 
-                using (HttpWebResponse response = (HttpWebResponse)request3.GetResponse())
-                using (Stream stream = response.GetResponseStream())
-                using (StreamReader reader = new StreamReader(stream))
+                try
                 {
-                    result = reader.ReadToEnd();
+                    using (HttpWebResponse response = (HttpWebResponse) request3.GetResponse())
+                    using (Stream stream = response.GetResponseStream())
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        result = reader.ReadToEnd();
+                    }
+
+                    dynamic jsonResult3 = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
+
+                    string registrationErrors = (string) jsonResult3["errors"];
+
+                    if (registrationErrors == "0")
+                    {
+                        Console.WriteLine($"{i}. Register user {userName}.");
+                    }
                 }
-
-                dynamic jsonResult3 = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
-
-                string registrationErrors = (string)jsonResult3["errors"];
-
-                if (registrationErrors == "0")
+                catch
                 {
-                    Console.WriteLine($"{i}. Register user {userName}.");
+                    i--;
                 }
 
                 //System.Threading.Thread.Sleep(1000);

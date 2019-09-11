@@ -7,3 +7,13 @@ D:\temp\Новая папка (26)\ConsoleApp1\ConsoleApp1\obj\Debug\RegisterArl
 D:\temp\Новая папка (26)\ConsoleApp1\ConsoleApp1\obj\Debug\RegisterArlandUsers.csproj.CopyComplete
 D:\temp\Новая папка (26)\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 D:\temp\Новая папка (26)\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\obj\Debug\RegisterArlandUsers.csprojAssemblyReference.cache
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\obj\Debug\RegisterArlandUsers.csproj.CoreCompileInputs.cache
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\obj\Debug\RegisterArlandUsers.csproj.CopyComplete
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\temp\Новая папка (26)\Новая папка\RegisterArlandUsers\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
